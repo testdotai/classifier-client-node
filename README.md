@@ -1,6 +1,6 @@
 # Test.ai Classifier - Node.js + WebdriverIO Client
 
-The code in this directory defines a client library for use with the gRPC-based Test.ai classifier server located in the main directory of this repo.
+The code in this directory defines a client library for use with the gRPC-based [Test.ai classifier server](https://github.com/testdotai/appium-classifier-plugin).
 
 ## Installation & Setup
 
@@ -39,4 +39,4 @@ For a concrete example, see `test/rpc-e2e-specs.js`
 
 ## Development
 
-TBD
+Tests expect a running Classifier server on port 50051.
