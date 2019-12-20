@@ -11,7 +11,7 @@
     "build": "gulp transpile",
     "mocha": "mocha",
     "prepublish": "gulp prepublish",
-    "test": "gulp once",
+    "test": "npm run build && mocha -t 60000 -R spec ./build/test/*-specs.js",
     "e2e-test": "gulp e2e-test",
     "watch": "gulp watch",
     "coverage": "gulp coveralls",

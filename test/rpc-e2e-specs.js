@@ -3,14 +3,13 @@ import path from 'path';
 import chai from 'chai';
 import should from 'should';
 import { remote } from 'webdriverio';
-import { main } from '../../../../build-js/lib/rpc'; // eslint-disable-line import/no-unresolved
 import ClassifierClient from '..';
 
 chai.use(should);
 
 const PORT = 50051;
 const HOST = "127.0.0.1";
-const FIXTURES = path.resolve(__dirname, "..", "..", "..", "..", "test", "fixtures");
+const FIXTURES = path.resolve(__dirname, "..", "..", "test", "fixtures");
 const CART_IMG = path.resolve(FIXTURES, "cart.png");
 const MIC_IMG = path.resolve(FIXTURES, "microphone.png");
 //const FOLDER_IMG = path.resolve(FIXTURES, "folder.png");
@@ -18,16 +17,6 @@ const MIC_IMG = path.resolve(FIXTURES, "microphone.png");
 //const TINY_MENU_IMG = path.resolve(FIXTURES, "menu_small.png");
 
 describe('RPC server', function () {
-  let server;
-
-  before(function () {
-    server = main(HOST, PORT);
-  });
-
-  after(function () {
-    server.forceShutdown();
-  });
-
   it('should handle requests to classify elements by image', async function () {
     const c = new ClassifierClient({host: HOST, port: PORT});
     const input = {
