@@ -1,6 +1,6 @@
 {
   "name": "test-ai-classifier-client",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "grpc client for semantic label classifier",
   "homepage": "https://github.com/testdotai/classifier-client-node",
   "bugs": "https://github.com/testdotai/classifier-client-node/issues",
